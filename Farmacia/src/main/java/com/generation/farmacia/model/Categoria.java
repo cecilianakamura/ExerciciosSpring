@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -22,6 +23,7 @@ public class Categoria {
 	private Long id;
 	
 	@NotNull(message="O nome da categoria é obrigatório")
+	@Size(min=3, max = 255, message = "O nome da categoria deve conter no mínimo 3 e máximo 255 caracteres.")
 	private String nome;
 	
 	@OneToMany(mappedBy="categoria",cascade = CascadeType.REMOVE)
