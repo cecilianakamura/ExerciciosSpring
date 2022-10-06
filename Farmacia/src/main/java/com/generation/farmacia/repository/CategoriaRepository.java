@@ -8,4 +8,5 @@ import com.generation.farmacia.model.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository <Categoria,Long> {
 
+
 }

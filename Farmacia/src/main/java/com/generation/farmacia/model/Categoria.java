@@ -22,7 +22,7 @@ public class Categoria {
 	private Long id;
 	
 	@NotNull(message="O nome da categoria é obrigatório")
-	private String categoria;
+	private String nome;
 	
 	@OneToMany(mappedBy="categoria",cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
@@ -36,12 +36,12 @@ public class Categoria {
 		this.id = id;
 	}
 
-	public String getCategoria() {
-		return categoria;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setCategoria(String nome) {
+		this.nome = nome;
 	}
 	
 	
