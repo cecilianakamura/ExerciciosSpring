@@ -42,9 +42,8 @@ public class Categoria {
 		return nome;
 	}
 
-	public void setCategoria(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
 	
 }
