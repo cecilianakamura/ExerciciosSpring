@@ -30,7 +30,7 @@ public class Produto {
 	@Size(min=3,max=1000,message="A descrição deve conter no mínimo 3 e máximo 1000 caracteres.")
 	private String descricao;
 	
-	@NotBlank(message="A quantidade em estoque é obrigatória.")
+	@NotNull(message="A quantidade em estoque é obrigatória.")
 	@Positive(message="A quantidade deve ser positiva.")
 	private Long quantidade;
 	
