@@ -35,6 +35,10 @@ public class Produto {
 	@Positive(message="O preço não pode ser negativo.")
 	private BigDecimal preco;
 	
+	@NotNull
+	@Positive(message="A quantidade não pode ser negativa.")
+	private Long quantidade;
+	
 	public Long getId() {
 		return id;
 	}
@@ -65,6 +69,14 @@ public class Produto {
 
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
+	}
+
+	public Long getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Long quantidade) {
+		this.quantidade = quantidade;
 	}
 	
 }
